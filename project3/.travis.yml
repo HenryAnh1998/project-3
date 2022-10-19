@@ -1,3 +1,4 @@
+script:
 - docker build -t udagram-api-feed ./udagram-api-feed
 # Tagging
 - docker tag udagram-api-feed anhnm123/udagram-api-feed:latest
