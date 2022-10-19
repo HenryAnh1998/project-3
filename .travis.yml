@@ -1,0 +1,19 @@
+script:
+  - docker build -t udagram-api-feed ./udagram-api-feed
+  - docker tag udagram-api-feed anhnm123/udagram-api-feed:latest
+  - echo "dckr_pat_QHUBfOiHCkscYHVWUpv1M_YywCI" | docker login -u "anhnm123" --password-stdin
+  - docker push anhnm123/udagram-api-feed:latest
+  - docker build -t udagram-frontend  ./udagram-frontend
+  - docker tag udagram-frontend  anhnm123/udagram-frontend:latest
+  - echo "dckr_pat_QHUBfOiHCkscYHVWUpv1M_YywCI" | docker login -u "anhnm123" --password-stdin
+  - docker push anhnm123/udagram-frontend:latest
+  - docker build -t udagram-api-user ./udagram-api-user
+  - docker tag udagram-api-user anhnm123/udagram-api-user:latest
+  - echo "dckr_pat_QHUBfOiHCkscYHVWUpv1M_YywCI" | docker login -u "anhnm123" --password-stdin
+  - docker push anhnm123/udagram-api-user:latest
+  - docker build -t reverseproxy ./reverseproxy
+  - docker tag reverseproxy anhnm123/reverseproxy:latest
+  - echo "dckr_pat_QHUBfOiHCkscYHVWUpv1M_YywCI" | docker login -u "anhnm123" --password-stdin
+  - docker push anhnm123/reverseproxy
+
+
