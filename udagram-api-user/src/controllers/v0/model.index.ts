@@ -1,4 +1,4 @@
-import {FeedItem} from './feed/models/FeedItem';
+
 import {User} from './users/models/User';
 
 
