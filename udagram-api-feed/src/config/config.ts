@@ -19,7 +19,7 @@ export const config = {
   'aws_region': 'us-east-1',
   'aws_profile': 'default',
   'aws_media_bucket': 'Anhnm123',
-  'url': 'http://localhost:8100',
+  'url': 'http://localhost:8080',
   'jwt': {
     'secret': 'testing',
   },
