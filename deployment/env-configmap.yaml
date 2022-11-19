@@ -5,11 +5,12 @@ metadata:
 data:
   POSTGRES_USERNAME: postgres
   POSTGRES_PASSWORD: Anhnm123!
-  POSTGRES_HOST: database-1.cgpvfoi6ruy2.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.cz7iqfbmn0h2.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: Anhnm123
-  AWS_REGION: us-east-1AWS_PROFILE=default
+  AWS_REGION: us-east-1
   JWT_SECRET: testing
   URL: http://localhost:8100
+
 
 

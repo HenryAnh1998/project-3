@@ -13,6 +13,11 @@ import {V0_USER_MODELS} from './controllers/v0/model.index';
   await sequelize.addModels(V0_USER_MODELS);
 
   console.debug("Initialize database connection...");
+  console.debug("process.env.POSTGRES_USERNAME", process.env.POSTGRES_USERNAME);
+  console.debug(" process.env.POSTGRES_PASSWORD",  process.env.POSTGRES_PASSWORD);
+  console.debug("process.env.POSTGRES_DB", process.env.POSTGRES_DB);
+  console.debug("process.env.POSTGRES_HOST",process.env.POSTGRES_HOST);
+
   await sequelize.sync();
 
   const app = express();
