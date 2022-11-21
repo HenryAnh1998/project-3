@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: docker.io/anhnm123/udagram-api-feed:v3
+        image: docker.io/anhnm123/udagram-api-feed:v6
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         resources:
