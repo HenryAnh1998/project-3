@@ -1,23 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-user
+  name: backend-user-deployment
+  labels:
+    app: backend-user
 spec:
   selector:
     matchLabels:
-      run: backend-user
-  replicas: 2
+      app: backend-user
+  replicas: 1
   template:
     metadata:
       labels:
-        run: backend-user
+        app: backend-user
     spec:
       containers:
       - name: backend-user
         image: docker.io/anhnm123/udagram-api-user:v6
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         resources:
           limits:
             cpu: 500m
@@ -30,12 +32,12 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: backend-user
+    app: backend-user
   name: backend-user
 spec:
   ports:
-  - name: "8080"
+  - protocol: TCP
     port: 8080
     targetPort: 8080
   selector:
-    service: backend-user
+    app: backend-user
